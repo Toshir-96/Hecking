@@ -14,7 +14,7 @@ body{
     font-family: 'lato', sans-serif;
     color: #454545;
     font-weight: 300;
-    background: #ffffff;
+    background: #121212;
 }
 a{
     color: #333333;
@@ -111,14 +111,14 @@ img{
     width: 160px;
     height: auto;
     border-radius: 100%;
-    border: 20px solid #f3f4fa;
+    border: 20px solid #222327;
 }
 
 .team .team-content{
     padding: 80px 20px 20px 20px;
     margin-top: -80px;
     text-align: center;
-    background: #f3f4fa;
+    background: #222327;
     border-radius: 10px;
 }
 .team .team-content h2{
@@ -152,7 +152,7 @@ margin-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, .6);
+    background: rgba(18,18,18);
     transition: all .3s;
     font-size: 0;
     z-index: 1;
