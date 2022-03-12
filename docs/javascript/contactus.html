@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./css/contactus.css">
+    <link rel="stylesheet" href="/contactus.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="contactForm">
-            <form onsubmit="sendEmail(); reset(); return false;">
+            <form action="mail.php" method="post">
                 <h2>Send Message</h2>
                 <div class="inputBox">
                     <input type="text" name="" required="required">
@@ -72,23 +72,5 @@
             width: fit-content;"="./contactus.html">Contact</a>
             <a href="./aboutus.html">About</a>
             <!-- <a href="./signinorsignup.html">Sign In</a> -->
-            <script src="https://smtpjs.com/v3/smtp.js"></script>
-            <script>
-                function sendEmail(){
-                    Email.send({
-    Host : "smtp.gmail.com",
-    Username : "hecking.me.96@gmail.com",
-    Password : "shravanth.m@19&",
-    To : 'hecking.me.96@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "This is the subject",
-    Body : "Name :" + document.getElementById("name").value
-    + "<br> Email: " + document.getElementById("email").value
-    + "<br> Message: " + document.getElementById("message").value
-}).then(
-  message => alert("Message Sent Sucessfully")
-);
-                }
-            </script>
 </body>
 </html>
