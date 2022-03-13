@@ -1,3 +1,34 @@
+<?php 
+ $server = "sql100.epizy.com";
+ $username = "epiz_31262177";
+ $password = "2w0GNz76JTIV8yR";
+ $dbname = "epiz_31262177_ContactUs";
+ 
+ 
+ $conn = mysqli_connect($server, $username, $password, $dbname);
+
+ if(!$conn){
+     die("Connection Failed:".mysqli_connect_error());
+    
+  }
+
+
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
+
+
 <?php
 //get data from form  
 
