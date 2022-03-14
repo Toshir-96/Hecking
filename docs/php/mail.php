@@ -1,8 +1,8 @@
 <?php 
  $server = "Localhost";
- $username = "id18607675 _contactus";
+ $username = "id18607675_contact_us_message_form";
  $password = "Hecking.me@19&";
- $dbname = "id18607675_contact_us_message_form";
+ $dbname = "id18607675 _contactus";
  
  
  $conn = mysqli_connect($server, $username, $password, $dbname);
@@ -15,9 +15,8 @@
 
 
 
-
-
-
+  
+ 
 
 
 
@@ -36,7 +35,7 @@ $name = $_POST['name'];
 $email= $_POST['email'];
 $message= $_POST['message'];
 
-$to = "hecking.me.96@gmail.com";
+$to = "support@hecking.me";
 
 $subject = "Mail From website";
 $txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
@@ -46,5 +45,5 @@ if($email!=NULL){
     mail($to,$subject,$txt,$headers);
 }
 //redirect
-header("Location:thankyou.html");
+header("Location: index.html");
 ?>
