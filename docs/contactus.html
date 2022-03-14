@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">.disclaimer { display: none; }</style>
+    <link rel="stylesheet" href="./css/contactus.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Hecking</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/88f2b5cbd6.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./Pictures/logo.png" type="image/x-icon">
+</head>
+<body>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p></p>
+        </div>
+        <br>
+        <div class="container">
+        <div class="contactInfo">
+            <div class="box">
+            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+            <div class="text">
+                <h3>Address</h3>
+                <p>15 Nickerson St<br>Seattle, 	Washington<br>Postal Code: 98109</p>
+                </div>
+            </div>
+            <div class="box">
+            <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+            <div class="text">
+                <h3>Phone</h3>
+                <p>(206) 285-1020</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p>support@hecking.me</p>
+                </div>
+            </div>
+        </div>
+        <div class="contactForm">
+            <form action="./php/mail.php" method="post">
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" name="name" required="required">
+                    <span>Full Name</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="emailadress" required="required">
+                    <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                    <textarea required="required" name="message"></textarea>
+                    <span>Type your Message...</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="send">
+                </div>
+            </form>
+        </div>                  
+    </div>
+    </section>
+    <div class="topnav">
+        <a class="active" href="./index.html">Home</a>
+            <a href="/news.html">News</a>
+            <a href style="padding-bottom: 4.2px;
+            border-bottom-style: solid;
+            border-bottom-width: 3.5px;
+            width: fit-content;"="./contactus.html">Contact</a>
+            <a href="./aboutus.html">About</a>
+            <!-- <a href="./signinorsignup.html">Sign In</a> -->
+</body>
+</html>
