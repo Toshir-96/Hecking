@@ -43,22 +43,22 @@
             </div>
         </div>
         <div class="contactForm">
-            <form onsubmit="sendEmail(); reset(); return false;">
+            <form action="./php/mail.php" method="post">
                 <h2>Send Message</h2>
                 <div class="inputBox">
-                    <input type="text" name="" required="required">
+                    <input type="text" name="name" required="required">
                     <span>Full Name</span>
                 </div>
                 <div class="inputBox">
-                    <input type="text" name="" required="required">
+                    <input type="text" name="emailadress" required="required">
                     <span>Email</span>
                     </div>
                     <div class="inputBox">
-                    <textarea required="required"></textarea>
+                    <textarea required="required" name="message"></textarea>
                     <span>Type your Message...</span>
                 </div>
                 <div class="inputBox">
-                    <input type="submit" name="" value="send">
+                    <input type="submit" value="send">
                 </div>
             </form>
         </div>                  
@@ -73,23 +73,5 @@
             width: fit-content;"="./contactus.html">Contact</a>
             <a href="./aboutus.html">About</a>
             <!-- <a href="./signinorsignup.html">Sign In</a> -->
-            <script src="https://smtpjs.com/v3/smtp.js"></script>
-            <script>
-                function sendEmail(){
-                    Email.send({
-    Host : "smtp.gmail.com",
-    Username : "hecking.me.96@gmail.com",
-    Password : "shravanth.m@19&",
-    To : 'hecking.me.96@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "This is the subject",
-    Body : "Name :" + document.getElementById("name").value
-    + "<br> Email: " + document.getElementById("email").value
-    + "<br> Message: " + document.getElementById("message").value
-}).then(
-  message => alert("Message Sent Sucessfully")
-);
-                }
-            </script>
 </body>
 </html>
