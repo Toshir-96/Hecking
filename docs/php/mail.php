@@ -1,8 +1,8 @@
 <?php 
- $server = "sql100.epizy.com";
- $username = "epiz_31262177";
- $password = "2w0GNz76JTIV8yR";
- $dbname = "epiz_31262177_ContactUs";
+ $server = "Localhost";
+ $username = "id18607675 _contactus";
+ $password = "Hecking.me@19&";
+ $dbname = "id18607675_contact_us_message_form";
  
  
  $conn = mysqli_connect($server, $username, $password, $dbname);
