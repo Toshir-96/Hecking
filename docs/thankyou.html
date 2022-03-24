@@ -1,102 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link rel="icon" href="./Pictures/logo.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Hecking</title>
-    <style>
-        .disclaimer { display: none; }
-        *,
-*::after,
-*::before {
-	box-sizing: border-box;
-}
+	<link rel="shortcut icon" href="./Pictures/favicon.ico" type="image/x-icon">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Thank You | Hecking</title>
+	<style>
+		.disclaimer {
+			display: none;
+		}
 
-:root {
-	font-size: 18px;
-}
+		*,
+		*::after,
+		*::before {
+			box-sizing: border-box;
+		}
 
-body {
-	margin: 0;
-	--color-text: #111;
-	--color-number: #999;
-	--color-bg: #fff;
-	--color-link: #1352d1;
-	--color-link-hover: #111;
-	color: var(--color-text);
-	background-color: var(--color-bg);
-	font-family: tenon, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+		:root {
+			font-size: 18px;
+		}
 
-.welcome{
-           text-align: center;
-        }
+		body {
+			margin: 0;
+			--color-text: #111;
+			--color-number: #999;
+			--color-bg: #fff;
+			--color-link: #1352d1;
+			--color-link-hover: #111;
+			color: var(--color-text);
+			background-color: var(--color-bg);
+			font-family: tenon, sans-serif;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
 
-        .button {
-	pointer-events: auto;
-	cursor: pointer;
-	background: #e7e7e7;
-	border: none;
-	padding: 1.5rem 3rem;
-	margin: 0;
-	font-family: inherit;
-	font-size: inherit;
-	position: relative;
-	display: inline-block;
-}
+		.welcome {
+			text-align: center;
+		}
 
-.button::before,
-.button::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
+		.button {
+			pointer-events: auto;
+			cursor: pointer;
+			background: #e7e7e7;
+			border: none;
+			padding: 1.5rem 3rem;
+			margin: 0;
+			font-family: inherit;
+			font-size: inherit;
+			position: relative;
+			display: inline-block;
+		}
 
-.button--pan {
-	font-family: aktiv-grotesk-extended, sans-serif;
-	font-weight: 700;
-	border: 2px solid #000;
-	border-radius: 3rem; 
-	position: absolute;
-	top: 60%;
-	left: 45%;
-	overflow: hidden;
-	color: #fff;
-}
+		.button::before,
+		.button::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 
-.button--pan span {
-	position: relative;
-	mix-blend-mode: difference;
-}
+		.button--pan {
+			font-family: aktiv-grotesk-extended, sans-serif;
+			font-weight: 700;
+			border: 2px solid #000;
+			border-radius: 3rem;
+			position: absolute;
+			top: 60%;
+			left: 45%;
+			overflow: hidden;
+			color: #fff;
+		}
 
-.button--pan::before {
-	content: '';
-	background: #000;
-	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
-}
+		.button--pan span {
+			position: relative;
+			mix-blend-mode: difference;
+		}
 
-.button--pan:hover::before {
-	transform: translate3d(0,-100%,0);
-}
-    </style>
+		.button--pan::before {
+			content: '';
+			background: #000;
+			transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+		}
+
+		.button--pan:hover::before {
+			transform: translate3d(0, -100%, 0);
+		}
+	</style>
 </head>
+
 <body>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-    <div class="welcome">
-        <h2>Thank you for contacting us</h2>
-        <div>
-        <button class="button button--pan" onclick="location.href = './index.html'"><span>Home</span>
-        </div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="welcome">
+		<h2>Thank you for contacting us</h2>
+		<div>
+			<button class="button button--pan" onclick="location.href = './index.html'"><span>Home</span>
+		</div>
 </body>
+
 </html>
