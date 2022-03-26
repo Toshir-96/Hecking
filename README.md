@@ -1,2 +1,1 @@
-# Hecking
-Hecking website
+# toshir-96.github.io
