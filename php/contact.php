@@ -1,7 +1,7 @@
 <?php
-$to = 'support@itembridge.com';
-$subject = 'You subject';
-$headers = 'From: (Your site)' . "\r\n" . 'Content-type: text/html; charset=utf-8';
+$to = 'hecking.me.96@gmail.com';
+$subject = 'Contact-Us';
+$headers = 'From: Website' . "\r\n" . 'Content-type: text/html; charset=utf-8';
 $message = '
 <html>
 	<head>
@@ -11,7 +11,7 @@ $message = '
 		<h3>Name: <span style="font-weight: normal;">' . $_POST['name'] . '</span></h3>
 		<h3>Email: <span style="font-weight: normal;">' . $_POST['email'] . '</span></h3>
 		<div>
-			<h3 style="margin-bottom: 5px;">Comment:</h3>
+			<h3 style="margin-bottom: 5px;">Message:</h3>
 			<div>' . $_POST['comment'] . '</div>
 		</div>
 	</body>
@@ -25,4 +25,3 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['comment'
 } else {
 	echo '<span class="text-danger">All fields must be filled!</span>';
 }
-?>
