@@ -341,7 +341,7 @@ var $ = jQuery;
 
 			if ($(".mailchimp").length > 0) {
 				$('.mailchimp').ajaxChimp({
-					url: 'http://us10.list-manage.com/subscribe/post?u=69007f000c70b89e124b9308d&amp;id=1225ba8aee'
+					url: '//hecking.us14.list-manage.com/subscribe/post?u=05ced7d19e74122139a33526c&amp;id=4a3225a071'
 				});
 			}
 		}
