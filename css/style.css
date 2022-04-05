@@ -464,27 +464,6 @@ input.input, textarea, input[type=password], input[type=text], input[type=email]
 }
 .subscribe-button-color:hover {background-color: rgb(88, 88, 88);}
 
-/* .submit-button {
-  background-color: black; /* Green */
-  border: none;
-  color: white;
-  padding: 8px 40px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.submit-button-color {
-  background-color: black;
-  color: white;
-  border: 2px solid rgb(88, 88, 88);
-}
-.submit-button-color:hover {background-color: rgb(88, 88, 88);} */
-
 .btn {
   padding: 0;
   margin-bottom: 20px;
