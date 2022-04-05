@@ -1,0 +1,424 @@
+/*----------------------------------------------------
+
+1. Global Area 
+2. Header Section
+=====================================================================*/
+/*=========
+Font load
+===========*/
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,600;1,700;1,800;1,900&display=swap");
+/*=========
+Color Code
+===========*/
+/*global area*/
+/*----------------------------------------------------*/
+body {
+  margin: 0;
+  padding: 100px 0px;
+  overflow-x: hidden;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  background: #f9f9f9;
+  color: #2f3146;
+  font-family: "Jost", sans-serif;
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  background-image: url(../img/bbg.jpg);
+  background-size: cover;
+}
+
+::selection {
+  color: #fff;
+  background-color: #78c68e;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #78c68e;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.form-control:focus,
+button:visited,
+button.active,
+button:hover,
+button:focus,
+input:visited,
+input.active,
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus,
+a:hover,
+a:focus,
+a:visited,
+a.active,
+select,
+select:hover,
+select:focus,
+select:visited {
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.form-control {
+  box-shadow: none;
+}
+
+p, label {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Jost", sans-serif;
+}
+
+.pt150 {
+  padding-top: 150px;
+}
+
+.multisteps-form__panel[data-animation=scaleOut] {
+  transform: scale(1.1);
+}
+
+.multisteps-form__panel[data-animation=scaleOut].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+
+.multisteps-form__panel[data-animation=slideHorz] {
+  left: -50px;
+}
+
+.multisteps-form__panel[data-animation=slideHorz].js-active {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+  transition-delay: 0s;
+  left: 0;
+}
+
+.multisteps-form__panel[data-animation=slideVert] {
+  top: 30px;
+}
+
+.multisteps-form__panel[data-animation=slideVert].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: 0;
+}
+
+.multisteps-form__panel[data-animation=fadeIn].js-active {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+
+.multisteps-form__panel[data-animation=scaleIn] {
+  transform: scale(0.9);
+}
+
+.multisteps-form__panel[data-animation=scaleIn].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+
+/* ==========================================================================
+   multistep css
+   ========================================================================== */
+.multisteps-form__progress {
+  padding-top: 60px;
+  height: 100%;
+}
+
+.multisteps-form__panel {
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  overflow: hidden;
+  height: 0;
+}
+.multisteps-form__panel.js-active {
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  height: auto;
+}
+.multisteps-form__panel[data-animation=scaleOut] {
+  transform: scale(1.1);
+}
+.multisteps-form__panel[data-animation=scaleOut].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+.multisteps-form__panel[data-animation=slideHorz] {
+  left: -50px;
+}
+.multisteps-form__panel[data-animation=slideHorz].js-active {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+  transition-delay: 0s;
+  left: 0;
+}
+.multisteps-form__panel[data-animation=slideVert] {
+  top: 30px;
+}
+.multisteps-form__panel[data-animation=slideVert].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: 0;
+}
+.multisteps-form__panel[data-animation=fadeIn].js-active {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+.multisteps-form__panel[data-animation=scaleIn] {
+  transform: scale(0.9);
+}
+.multisteps-form__panel[data-animation=scaleIn].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+
+.actions {
+  right: 0px;
+  bottom: -125px;
+  margin-bottom: 20px;
+  position: absolute;
+}
+.actions li {
+  height: 65px;
+  width: 430px;
+  color: #3c3c3c;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 70px;
+  margin-left: 15px;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+  background-color: #fff;
+  text-transform: uppercase;
+}
+
+/*---------------------------------------------------- */
+/*inner area*/
+/*----------------------------------------------------*/
+.wrapper {
+  margin: 0 auto;
+  max-width: 1420px;
+  background-color: #fff;
+}
+.wrapper .poll-style-three-text {
+  width: 50%;
+  float: right;
+  max-width: 645px;
+  border-radius: 4px;
+  padding: 45px 50px;
+  background-color: #fff;
+  display: inline-block;
+}
+.wrapper .poll-style-three-text h2 {
+  color: #0f0f0f;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 28px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #eeeeee;
+}
+.wrapper .poll-style-three-text h3 {
+  color: #151515;
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 40px;
+}
+.wrapper .poll-style-three-text .poll-item-selector li {
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+.wrapper .poll-style-three-text .poll-item-selector li label {
+  width: 100%;
+  font-size: 23px;
+  padding-left: 50px;
+}
+.wrapper .poll-style-three-text .poll-item-selector li .checkmark-border:before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  left: 0px;
+  top: 15px;
+  background-color: #fff;
+  border: 1px solid #c4c4c4;
+}
+.wrapper .poll-style-three-text .poll-item-selector li .checkmark-border:after {
+  left: 0px;
+  top: 15px;
+  width: 30px;
+  content: "";
+  height: 30px;
+  display: none;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #446d76;
+}
+.wrapper .poll-style-three-text .poll-item-selector input[type=checkbox] + .checkmark-border:after,
+.wrapper .poll-style-three-text .poll-item-selector input[type=checkbox] + .checkmark-border:before {
+  border-radius: 0;
+}
+.wrapper .poll-style-three-text .poll-item-selector li .exp-option-box:checked ~ .checkmark-border:after {
+  display: block;
+}
+.wrapper .poll-style-three-text .poll-item-selector .exp-option-box {
+  display: none;
+}
+.wrapper .poll-style-three-text .poll-item-selector .exp-label {
+  color: #446d76;
+  display: block;
+}
+.wrapper .poll-style-three-text .poll-item-selector .poll-btn-pair {
+  margin-top: 30px;
+}
+.wrapper .poll-style-three-text .poll-item-selector .poll-btn-pair span {
+  height: 68px;
+  padding: 15px 24px;
+  color: #292929;
+  border-radius: 40px;
+  margin-left: 20px;
+  border: 2px solid #9eb1b1;
+  background-color: transparent;
+}
+.wrapper .poll-style-three-text .poll-item-selector .poll-btn-pair button {
+  font-size: 23px;
+  font-weight: 600;
+}
+.wrapper .poll-style-three-text .poll-item-selector .poll-btn-pair button:nth-child(1) {
+  color: #fff;
+  height: 65px;
+  width: 225px;
+  border: none;
+  border-radius: 40px;
+  background-image: linear-gradient(4deg, #60dca0 0%, #18c1b2 100%);
+}
+.wrapper .poll-style-three-text .poll-item-selector .poll-btn-pair button:nth-child(2) {
+  height: 68px;
+  width: 160px;
+  color: #292929;
+  border-radius: 40px;
+  margin-left: 20px;
+  border: 2px solid #9eb1b1;
+  background-color: transparent;
+}
+
+/*---------------------------------------------------- */
+/*Responsive area*/
+/*----------------------------------------------------*/
+/* ==================================================
+*	01 - media screen and (max-width: 1440px)
+*	02 - media screen and (max-width: 1280px)
+*	03 - media screen and (max-width: 1199px)
+*	04 - media screen and (max-width: 991px)
+*	05 - media screen and (max-width: 767px)
+*	06 - media screen and (max-width: 680px)
+*	07 - media screen and (max-width: 580px)
+*	08 - media screen and (max-width: 480px)
+*	09 - media screen and (max-width: 380px)
+*	10 - media screen and (max-width: 320px)
+================================================== */
+@media screen and (max-width: 1280px) {
+  .wrapper .poll-style-three-text {
+    float: none;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .wrapper .poll-style-three-text {
+    width: 100%;
+  }
+
+  .wrapper .poll-style-three-text .poll-item-selector .poll-btn-pair button:nth-child(1) {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrapper .poll-style-three-text {
+    padding: 30px 15px;
+  }
+
+  .wrapper .poll-style-three-text .poll-item-selector .poll-btn-pair button {
+    font-size: 16px;
+    width: 100px;
+  }
+
+  .wrapper .poll-style-three-text .poll-item-selector .poll-btn-pair button:nth-child(1),
+.wrapper .poll-style-three-text .poll-item-selector .poll-btn-pair button:nth-child(2) {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+/*---------------------------------------------------- */

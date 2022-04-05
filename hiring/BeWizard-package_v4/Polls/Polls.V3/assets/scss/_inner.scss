@@ -1,0 +1,115 @@
+.wrapper {
+	margin: 0 auto;
+	max-width: 1420px;
+	background-color: #fff;
+	.poll-style-three-text {
+		width: 50%;
+		float: right;
+		max-width: 645px;
+		border-radius: 4px;
+		padding: 45px 50px;
+		background-color: #fff;
+		display: inline-block;
+		h2 {
+			color: #0f0f0f;
+			font-size: 28px;
+			font-weight: 700;
+			padding-bottom: 28px;
+			margin-bottom: 30px;
+			text-transform: uppercase;
+			border-bottom: 2px solid #eeeeee;
+		}
+		h3 {
+			color: #151515;
+			font-size: 30px;
+			font-weight: 600;
+			padding-bottom: 40px;
+		}
+		.poll-item-selector {
+			li {
+				width: 100%;
+				height: 65px;
+				line-height: 65px;
+				font-weight: 600;
+				position: relative;
+				display: inline-block;
+			}
+			li label {
+				width: 100%;
+				font-size: 23px;
+				padding-left: 50px;
+			}
+			li .checkmark-border:before {
+				content: "";
+				position: absolute;
+				height: 30px;
+				width: 30px;
+				border-radius: 100%;
+				left: 0px;
+				top: 15px;
+				background-color: #fff;
+				border: 1px solid #c4c4c4;
+			}
+			li .checkmark-border:after {
+				left: 0px;
+				top: 15px;
+				width: 30px;
+				content: "";
+				height: 30px;
+				display: none;
+				position: absolute;
+				border-radius: 100%;
+				background-color: #446d76;
+			}
+			
+			input[type="checkbox"] + .checkmark-border:after, 
+			input[type="checkbox"] + .checkmark-border:before {
+				border-radius: 0;
+			}
+
+			li .exp-option-box:checked ~ .checkmark-border:after {
+				display: block;
+			}
+			.exp-option-box {
+				display: none;
+			}
+			.exp-label {
+				color: #446d76;
+				display: block;
+			}
+			.poll-btn-pair {
+				margin-top: 30px;
+				span {
+					height: 68px;
+					padding: 15px 24px;
+					color: #292929;
+					border-radius: 40px;
+					margin-left: 20px;
+					border: 2px solid #9eb1b1;
+					background-color: transparent;
+				}
+				button {
+					font-size: 23px;
+					font-weight: 600;
+					&:nth-child(1) {
+						color: #fff;
+						height: 65px;
+						width: 225px;
+						border: none;
+						border-radius: 40px;
+						background-image: linear-gradient( 4deg, rgb(96,220,160) 0%, rgb(24,193,178) 100%);
+					}
+					&:nth-child(2) {
+						height: 68px;
+						width: 160px;
+						color: #292929;
+						border-radius: 40px;
+						margin-left: 20px;
+						border: 2px solid #9eb1b1;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+}

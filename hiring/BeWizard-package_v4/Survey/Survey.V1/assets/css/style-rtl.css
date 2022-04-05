@@ -1,0 +1,679 @@
+@charset "UTF-8";
+/*----------------------------------------------------
+
+1. Global Area 
+2. Header Section
+=====================================================================*/
+/*=========
+Font load
+===========*/
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,600;1,700;1,800;1,900&display=swap");
+/*=========
+Color Code
+===========*/
+/*global area*/
+/*----------------------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  background: #f9f9f9;
+  color: #2f3146;
+  font-family: "Jost", sans-serif;
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  background-image: url(../img/cbg.jpg);
+}
+
+::selection {
+  color: #fff;
+  background-color: #78c68e;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #78c68e;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.form-control:focus,
+button:visited,
+button.active,
+button:hover,
+button:focus,
+input:visited,
+input.active,
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus,
+a:hover,
+a:focus,
+a:visited,
+a.active,
+select,
+select:hover,
+select:focus,
+select:visited {
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.form-control {
+  box-shadow: none;
+}
+
+p, label {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Jost", sans-serif;
+}
+
+.rate-value {
+  position: relative;
+}
+.rate-value:before {
+  left: 0;
+  top: -15px;
+  font-size: 22px;
+  cursor: pointer;
+  content: "";
+  color: #78c68e;
+  font-weight: 400;
+  font-family: "Font Awesome 5 Free";
+}
+
+.rate-value.full-block:before {
+  font-weight: 900;
+}
+
+.multisteps-form__panel[data-animation=scaleOut] {
+  transform: scale(1.1);
+}
+
+.multisteps-form__panel[data-animation=scaleOut].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+
+.multisteps-form__panel[data-animation=slideHorz] {
+  left: -50px;
+}
+
+.multisteps-form__panel[data-animation=slideHorz].js-active {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+  transition-delay: 0s;
+  left: 0;
+}
+
+.multisteps-form__panel[data-animation=slideVert] {
+  top: 30px;
+}
+
+.multisteps-form__panel[data-animation=slideVert].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: 0;
+}
+
+.multisteps-form__panel[data-animation=fadeIn].js-active {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+
+.multisteps-form__panel[data-animation=scaleIn] {
+  transform: scale(0.9);
+}
+
+.multisteps-form__panel[data-animation=scaleIn].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+
+/* ==========================================================================
+   multistep css
+   ========================================================================== */
+.multisteps-form__progress {
+  padding-top: 60px;
+  height: 100%;
+}
+
+.multisteps-form__panel {
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  overflow: hidden;
+  height: 0;
+}
+.multisteps-form__panel.js-active {
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  height: auto;
+}
+.multisteps-form__panel[data-animation=scaleOut] {
+  transform: scale(1.1);
+}
+.multisteps-form__panel[data-animation=scaleOut].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+.multisteps-form__panel[data-animation=slideHorz] {
+  left: -50px;
+}
+.multisteps-form__panel[data-animation=slideHorz].js-active {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+  transition-delay: 0s;
+  left: 0;
+}
+.multisteps-form__panel[data-animation=slideVert] {
+  top: 30px;
+}
+.multisteps-form__panel[data-animation=slideVert].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: 0;
+}
+.multisteps-form__panel[data-animation=fadeIn].js-active {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+.multisteps-form__panel[data-animation=scaleIn] {
+  transform: scale(0.9);
+}
+.multisteps-form__panel[data-animation=scaleIn].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+
+.actions {
+  left: 0px;
+  bottom: -125px;
+  margin-bottom: 20px;
+  position: absolute;
+}
+.actions li {
+  height: 65px;
+  width: 430px;
+  color: #3c3c3c;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 70px;
+  margin-left: 15px;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+  background-color: #fff;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.actions li span, .actions li button {
+  border: none;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+  transition: 0.3s all ease-in-out;
+}
+.actions li span:hover, .actions li button:hover {
+  background-color: #78c68e;
+  color: #fff;
+}
+
+.wizard-progress {
+  bottom: -80px;
+  width: 500px;
+  position: absolute;
+}
+.wizard-progress span {
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+}
+.wizard-progress .progress {
+  border-radius: 30px;
+  background-color: #fff;
+}
+.wizard-progress .progress-bar {
+  border-radius: 30px;
+  background-color: #78c68e;
+}
+
+/*---------------------------------------------------- */
+/*inner area*/
+/*----------------------------------------------------*/
+.wizard-content-1 {
+  margin: 110px auto 150px;
+  max-width: 1680px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.wizard-content-1 .survey-top-title {
+  top: -90px;
+  z-index: 1;
+  margin: 0 auto;
+  font-size: 45px;
+  max-width: 1490px;
+  border-radius: 100px;
+  padding: 45px 0px 35px;
+  background-color: #414040;
+}
+.wizard-content-1 .survey-top-title:before {
+  top: 0;
+  right: -10px;
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 100px;
+  background-color: #78c68e;
+}
+.wizard-content-1 .survey-top-title:after {
+  top: 0;
+  content: "";
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  right: -20px;
+  position: absolute;
+  border-radius: 100px;
+  background-color: #414040;
+}
+.wizard-content-1 .survey-top-title h2 {
+  color: #fff;
+  margin: 0 auto;
+  font-size: 45px;
+  max-width: 550px;
+  font-weight: 700;
+  line-height: 1.111;
+}
+.wizard-content-1 .survey-form-img {
+  float: left;
+  margin-right: 100px;
+}
+.wizard-content-1 .survey-form-area {
+  padding: 10px 115px 80px;
+}
+.wizard-content-1 .survey-form-field h3 {
+  color: #1b1b1b;
+  font-size: 42px;
+  font-weight: 700;
+  padding-bottom: 45px;
+}
+.wizard-content-1 .survey-form-field li {
+  width: 25%;
+  float: right;
+  margin-bottom: 40px;
+  text-align: right;
+}
+.wizard-content-1 .survey-form-field li label {
+  width: 100%;
+  color: #414040;
+  font-size: 30px;
+  padding-right: 65px;
+}
+.wizard-content-1 .survey-form-field li .exp-option-box {
+  display: none;
+}
+.wizard-content-1 .survey-form-field li .checkmark-border:before {
+  top: 0px;
+  width: 45px;
+  content: "";
+  right: -65px;
+  height: 45px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #fff;
+  border: 1px solid #c4c4c4;
+}
+.wizard-content-1 .survey-form-field li .checkmark-border:after {
+  top: 7px;
+  right: -57px;
+  width: 30px;
+  content: "";
+  height: 30px;
+  display: none;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #78c68e;
+}
+.wizard-content-1 .survey-form-field li .exp-option-box:checked ~ .checkmark-border:after {
+  display: block;
+}
+.wizard-content-1 .q-depth-input-area .input-depth input {
+  width: 100%;
+}
+.wizard-content-1 .survey-content-two .survey-form-field {
+  max-width: 700px;
+  padding-top: 120px;
+  display: inline-block;
+}
+.wizard-content-1 .survey-content-two .survey-form-field h3 {
+  font-size: 40px;
+}
+.wizard-content-1 .survey-content-two .survey-form-field .q-depth-input-area .input-depth {
+  margin-bottom: 20px;
+}
+.wizard-content-1 .survey-content-two .survey-form-field .q-depth-input-area .input-depth input {
+  height: 80px;
+  border-radius: 4px;
+  padding-left: 90px;
+  border: 2px solid #78c68e;
+}
+.wizard-content-1 .survey-content-two .survey-form-field .q-depth-input-area .input-depth .in-icon {
+  top: 23px;
+  left: 30px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #def7e5;
+}
+.wizard-content-1 .survey-content-two .survey-form-field .q-depth-input-area .input-depth .in-icon i {
+  color: #78c68e;
+}
+.wizard-content-1 .survey-content-two .survey-form-field .survey-ratting {
+  margin: 18px 0px 65px;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 40px 30px;
+  border: 2px solid #78c68e;
+}
+.wizard-content-1 .survey-content-two .survey-form-field .survey-ratting .survey-rate-text {
+  left: 0;
+  right: 0;
+  color: #fff;
+  width: 155px;
+  height: 28px;
+  bottom: -15px;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: center;
+  line-height: 27px;
+  position: absolute;
+  border-radius: 6px;
+  background-color: #78c68e;
+}
+.wizard-content-1 .survey-content-two .survey-form-field .survey-ratting li {
+  width: 30px;
+  height: 25px;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.wizard-content-1 .survey-content-two .survey-form-field .survey-ratting li label {
+  padding-left: 0;
+}
+.wizard-content-1 .survey-content-two .survey-form-field .survey-ratting li .survey-rate {
+  display: none;
+}
+.wizard-content-1 .survey-content-two .survey-form-field .survey-ratting li .survey-rate-option .survey-rate:checked ~ .rate-value:before {
+  content: "";
+  font-weight: 900;
+}
+.wizard-content-1 .survey-content-two .survey-rate-content {
+  padding-top: 70px;
+}
+.wizard-content-1 .survey-content-two .survey-rate-content h3 {
+  padding-bottom: 32px;
+}
+.wizard-content-1 .survey-content-two .survey-rate-content p {
+  color: #1b1b1b;
+  font-size: 20px;
+}
+.wizard-content-1 .survey-content-two .survey-connect-option {
+  max-width: 470px;
+  margin-top: 10px;
+}
+.wizard-content-1 .survey-content-two .survey-connect-option:after {
+  top: 25px;
+  right: 20px;
+  font-size: 20px;
+  content: "";
+  position: absolute;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+.wizard-content-1 .survey-content-two .survey-connect-option select {
+  width: 100%;
+  height: 80px;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 4px;
+  padding-left: 35px;
+  border: 2px solid #78c68e;
+  -webkit-appearance: none;
+}
+.wizard-content-1 .survey-content-two .survey-thankyou p {
+  color: #1b1b1b;
+  font-size: 20px;
+  padding: 10px 0px;
+}
+.wizard-content-1 .survey-content-two .survey-thankyou h2 {
+  color: #1b1b1b;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+/*---------------------------------------------------- */
+/*Responsive area*/
+/*----------------------------------------------------*/
+/* ==================================================
+* 01 - media screen and (max-width: 1440px)
+* 02 - media screen and (max-width: 1280px)
+* 03 - media screen and (max-width: 1199px)
+* 04 - media screen and (max-width: 991px)
+* 05 - media screen and (max-width: 767px)
+* 06 - media screen and (max-width: 680px)
+* 07 - media screen and (max-width: 580px)
+* 08 - media screen and (max-width: 480px)
+* 09 - media screen and (max-width: 380px)
+* 10 - media screen and (max-width: 320px)
+================================================== */
+@media screen and (max-width: 1440px) {
+  .wizard-content-1 .survey-form-area {
+    padding: 10px 30px 80px;
+  }
+
+  .wizard-content-1 .survey-form-img {
+    margin-right: 40px;
+  }
+
+  .wizard-content-1 .survey-content-two .survey-form-field {
+    max-width: 615px;
+  }
+
+  .actions {
+    right: 15px;
+  }
+
+  .actions li {
+    width: 220px;
+  }
+
+  .wizard-progress {
+    left: 15px;
+  }
+
+  .wizard-content-1 .survey-top-title {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .wizard-content-1 .survey-form-img {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .wizard-content-1 .survey-top-title {
+    top: 0;
+    border-radius: 0;
+  }
+
+  .wizard-content-1 .survey-top-title:before,
+.wizard-content-1 .survey-top-title:after {
+    border-radius: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .wizard-content-1 .survey-form-img {
+    width: 100%;
+  }
+
+  .wizard-content-1 .survey-form-field li {
+    width: 100%;
+  }
+
+  .wizard-progress {
+    width: 250px;
+  }
+
+  .actions li {
+    height: 60px;
+    font-size: 14px;
+    width: 180px;
+    line-height: 62px;
+  }
+
+  .wizard-content-1 {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 680px) {
+  .wizard-progress,
+.actions {
+    margin: 30px auto;
+    position: static;
+  }
+
+  .wizard-progress span {
+    color: #000;
+  }
+  .wizard-progress .progress {
+    background-color: #f3f3f3;
+  }
+
+  .actions {
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .actions li {
+    background-color: #78c68e;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wizard-content-1 .survey-top-title h2 {
+    font-size: 40px;
+  }
+
+  .wizard-content-1 .survey-form-field h3 {
+    font-size: 36px;
+  }
+
+  .wizard-content-1 .survey-form-field li label {
+    font-size: 20px;
+  }
+
+  .wizard-content-1 .survey-form-field li .checkmark-border:before {
+    height: 30px;
+    width: 30px;
+  }
+
+  .wizard-content-1 .survey-form-field li .checkmark-border:after {
+    top: 5px;
+    left: -60px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .wizard-content-1 .survey-form-field li {
+    margin-bottom: 20px;
+  }
+
+  .wizard-content-1 .survey-form-area {
+    padding: 10px 30px 50px;
+  }
+
+  .wizard-content-1 .survey-content-two .survey-form-field h3 {
+    font-size: 32px;
+  }
+
+  .survey-thankyou {
+    text-align: center;
+  }
+
+  .wizard-content-1 .survey-content-two .survey-thankyou h2 {
+    font-size: 36px;
+  }
+
+  .wizard-content-1 {
+    margin-bottom: 0;
+  }
+}
+/*---------------------------------------------------- */

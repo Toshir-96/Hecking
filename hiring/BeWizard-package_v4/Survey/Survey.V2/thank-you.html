@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Survey V2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<body>
+		<div class="wrapper">
+			<div class="wizard-content-1 clearfix">
+				<div class="steps d-none position-absolute clearfix">
+					<ul class="tablist multisteps-form__progress">
+						<li class="multisteps-form__progress-btn ">
+							
+						</li>
+						<li class="multisteps-form__progress-btn js-active current">
+							
+						</li>
+						<li class="multisteps-form__progress-btn">
+							
+						</li>
+					</ul>
+				</div>
+				<div class="step-inner-content clearfix position-relative">
+					<div class="form-area position-relative">
+						<div class="multisteps-form__panel js-active" data-animation="slideHorz">
+							<div class="wizard-forms">
+								<div class="job-style-two-content d-flex">
+									<div class="job-wizard-left-area position-relative">
+										<div class="job-wizard-left-text">
+											<h1>SURVEY
+											</h1>
+											<p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
+										</div>
+										<span class="w-copyright position-absolute">©2020 BeWizard</span>
+									</div>
+									<div class="job-wizard-right-area survey-right-content-5">
+										<div class="survey-reccomend-area-3">
+											<div class="jw-top-title">
+												<h1>PThanks for your survey</h1>
+											</div>
+											<div class="details-form-area">
+												<div class="row">
+													<h2>Our team will confirm by mail you with your survey report.</h2>
+												</div>
+											</div>
+											<div class="actions">
+												<ul>
+													<li><span class="js-btn-prev" title="PREV">Previous Question</span></li>
+													<li><span class="" title="NEXT">Done!</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="assets/js/jquery-3.3.1.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/owl.carousel.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/form-step.js"></script>
+		<script src="assets/js/jquery.validate.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<!-- <script src="assets/js/switch.js"></script> -->
+		<script>
+			$("#customFile").change(function() {
+				filename = this.files[0].name
+			});
+			$(".custom-file-input").on("change", function() {
+				var fileName = $(this).val().split("\\").pop();
+				$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+			});
+		</script>
+	</body>
+
+	</html>

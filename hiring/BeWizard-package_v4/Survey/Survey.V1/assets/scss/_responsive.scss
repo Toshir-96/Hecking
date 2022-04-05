@@ -1,0 +1,132 @@
+/* ==================================================
+*	01 - media screen and (max-width: 1440px)
+*	02 - media screen and (max-width: 1280px)
+*	03 - media screen and (max-width: 1199px)
+*	04 - media screen and (max-width: 991px)
+*	05 - media screen and (max-width: 767px)
+*	06 - media screen and (max-width: 680px)
+*	07 - media screen and (max-width: 580px)
+*	08 - media screen and (max-width: 480px)
+*	09 - media screen and (max-width: 380px)
+*	10 - media screen and (max-width: 320px)
+================================================== */
+@media screen and (max-width: 1440px) { 
+	.wizard-content-1 .survey-form-area {
+		padding: 10px 30px 80px;
+	}
+	.wizard-content-1 .survey-form-img {
+		margin-right: 40px;
+	}
+	.wizard-content-1 .survey-content-two .survey-form-field {
+		max-width: 615px;
+	}
+	.actions  {
+		right: 15px;
+	}
+	.actions li {
+		width: 220px;
+	}
+	.wizard-progress {
+		left: 15px;
+	}
+	.wizard-content-1 .survey-top-title {
+		max-width: 1200px;
+	}
+}
+@media screen and (max-width: 1280px) {  
+	.wizard-content-1 .survey-form-img {
+		width: 40%;
+	}
+}
+@media screen and (max-width: 991px) {  
+	.wizard-content-1 .survey-top-title {
+		top: 0;
+		border-radius: 0;
+	}
+	.wizard-content-1 .survey-top-title:before,
+	.wizard-content-1 .survey-top-title:after {
+		border-radius: 0;
+		left: 0;
+		right: 0;
+	}
+	.wizard-content-1 .survey-form-img {
+		width: 100%;
+	}
+	.wizard-content-1 .survey-form-field li {
+		width: 100%;
+	}
+	.wizard-progress {
+		width: 250px;
+	}
+	.actions li {
+		height: 60px;
+		font-size: 14px;
+		width: 180px;
+		line-height: 62px;
+	}
+	.wizard-content-1 {
+		margin-top: 0;
+	}
+}
+@media screen and (max-width: 680px) {  
+	.wizard-progress,
+	.actions {
+		margin: 30px auto;
+		position: static;
+	}
+	.wizard-progress {
+		span {
+			color: #000;
+		}
+		.progress {
+			background-color: #f3f3f3;
+		}
+	}
+	.actions {
+		padding-bottom: 40px;
+		text-align: center;
+		li {
+			background-color: $base-color;
+		}
+	}
+
+}
+@media screen and (max-width: 480px) {  
+	.wizard-content-1 .survey-top-title h2 {
+		font-size: 40px;
+	}
+	.wizard-content-1 .survey-form-field h3 {
+		font-size: 36px;
+	}
+	.wizard-content-1 .survey-form-field li label {
+		font-size: 20px;
+	}
+	.wizard-content-1 .survey-form-field li .checkmark-border:before {
+		height: 30px;
+		width: 30px;
+	}
+	.wizard-content-1 .survey-form-field li .checkmark-border:after {
+		top: 5px;
+		left: -60px;
+		width: 20px;
+		height: 20px;
+	}
+	.wizard-content-1 .survey-form-field li {
+		margin-bottom: 20px;
+	}
+	.wizard-content-1 .survey-form-area {
+		padding: 10px 30px 50px;
+	}
+	.wizard-content-1 .survey-content-two .survey-form-field h3 {
+		font-size: 32px;
+	}
+	.survey-thankyou {
+		text-align: center;
+	}
+	.wizard-content-1 .survey-content-two .survey-thankyou h2 {
+		font-size: 36px;
+	}
+	.wizard-content-1 {
+		margin-bottom: 0;
+	}
+}

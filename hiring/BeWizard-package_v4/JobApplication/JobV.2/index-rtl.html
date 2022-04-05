@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+	<meta charset="utf-8">
+	<title>Job V2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/style-rtl.css">
+
+	<body>
+		<div class="wrapper position-relative">
+			<div class="wizard-content-1 clearfix">
+				<div class="steps d-inline-block position-absolute clearfix">
+					<ul class="tablist multisteps-form__progress">
+						<li class="multisteps-form__progress-btn js-active current"></li>
+						<li class="multisteps-form__progress-btn "></li>
+						<li class="multisteps-form__progress-btn"></li>
+					</ul>
+				</div>
+				<div class="step-inner-content clearfix position-relative">
+					<form class="multisteps-form__form" action="sendmail.php" id="wizard" method="POST">
+						<div class="form-area position-relative">
+							<div class="multisteps-form__panel  js-active" data-animation="fadeIn">
+								<div class="wizard-forms position-relative">
+									<div class="job-style-two-content d-flex">
+										<div class="job-wizard-left-area position-relative">
+											<div class="job-wizard-left-text">
+												<h1>Hey! Remember you 
+													have to Attribute
+												</h1>
+												<p>Copy the following link on the web you will be using this Resource.If you want more information read the attribution guide or download the license.</p>
+											</div>
+										</div>
+										<div class="job-wizard-right-area">
+											<div class="jw-top-title">
+												<h2>Hire Company</h2>
+												<p>Personal info</p>
+											</div>
+											<div class="hire-company-form">
+												<input type="text" name="company_name" placeholder="Company Name">
+												<input type="text" name="company_location" placeholder="Company Location">
+												<input type="text" name="text_url" placeholder="URL">
+											</div>
+											<div class="jw-gender-select position-relative">
+												<h3>Gender</h3>
+												<label>
+													<input type="radio" name="gender" value="Male">
+													<span class="checkmark">Male</span>
+												</label>
+												<label>
+													<input type="radio" name="gender" value="Female">
+													<span class="checkmark">Female</span>
+												</label>
+											</div>
+											<div class="upload-doc-area clearfix">
+												<div class="jw-doc-title">
+													<h2>Upload Doc</h2>
+													<p>( Files accepted: .pdf. doc/docx - Max file size: 190k for demo limit )</p>
+												</div>
+												<div class="custom-file">
+													<input type="file" name="doc_file" class="custom-file-input" id="customFile">
+													<label class="custom-file-label" for="customFile">No File Chosen</label>
+												</div>
+											</div>
+											<div class="actions">
+												<ul>
+													<li><span class="js-btn-next" title="NEXT">NEXT</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- step 1 -->
+							<div class="multisteps-form__panel" data-animation="fadeIn">
+								<div class="wizard-forms">
+									<div class="job-style-two-content d-flex">
+										<div class="job-wizard-left-area position-relative">
+											<div class="job-wizard-left-text">
+												<h1>Hey! Remember you 
+													have to Attribute
+												</h1>
+												<p>Copy the following link on the web you will be using this Resource.If you want more information read the attribution guide or download the license.</p>
+											</div>
+										</div>
+										<div class="job-wizard-right-area job-wizard-right-two">
+											<div class="jw-top-title">
+												<h2>Experience</h2>
+												<p>Select your specialities</p>
+											</div>
+											<div class="jw-exp-option">
+												<label>
+													<input type="radio" name="development" value="Development" class="exp-option-box">
+													<span class="checkmark-border"></span>
+													<span class="exp-label">Development</span>
+												</label>
+												<label>
+													<input type="radio" name="development" value="Design"  class="exp-option-box">
+													<span class="checkmark-border"></span>
+													<span class="exp-label">Design</span>
+												</label>
+												<label>
+													<input type="radio" name="development" value="Front Developer"  class="exp-option-box">
+													<span class="checkmark-border"></span>
+													<span class="exp-label">Front Developer</span>
+												</label>
+											</div>
+											<div class="jw-top-title">
+												<h2>What Your specialty </h2>
+												<p>Select your specialities</p>
+											</div>
+											<div class="jw-exp-option jw-exp-spcial clearfix">
+												<ul>
+													<li>
+														<label>
+															<input type="radio" name="specs_1" value="The art of Networking" class="exp-option-box" checked="checked">
+															<span class="exp-label">The art of Networking</span>
+															<span class="checkmark-border"></span>
+														</label>
+													</li>
+													<li>
+														<label>
+															<input type="radio" name="specs_1" value="Verbally Communicate" class="exp-option-box">
+															<span class="exp-label">Verbally Communicate</span>
+															<span class="checkmark-border"></span>
+														</label>
+													</li>
+												</ul>
+											</div>
+											<div class="word-txt-area">
+												<textarea name="some_word" placeholder="Write Some Words"></textarea>
+											</div>
+											<div class="actions">
+												<ul>
+													<li><span class="js-btn-next" title="NEXT">NEXT</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- step 2 -->
+							<div class="multisteps-form__panel" data-animation="fadeIn">
+								<div class="wizard-forms">
+									<div class="job-style-two-content d-flex">
+										<div class="job-wizard-left-area position-relative">
+											<div class="job-wizard-left-text">
+												<h1>Hey! Remember you 
+													have to Attribute
+												</h1>
+												<p>Copy the following link on the web you will be using this Resource.If you want more information read the attribution guide or download the license.</p>
+											</div>
+										</div>
+										<div class="job-wizard-right-area job-wizard-right-three">
+											<div class="jw-top-title">
+												<h2>Job Application </h2>
+												<p>Select your specialities</p>
+											</div>
+											<div class="job-app-select-option">
+												<ul>
+													<li>
+														<select name="j_position">
+															<option>Select Position</option>
+															<option>Employee</option>
+															<option>Assistance</option>
+															<option>Developer</option>
+															<option>Manager</option>
+															<option>Finder</option>
+														</select>
+													</li>
+													<li>
+														<select name="salary">
+															<option>Salary ($100 to $200)</option>
+															<option>Salary ($200 to $300)</option>
+															<option>Salary ($400 to $500)</option>
+															<option>Salary ($500 to $600)</option>
+															<option>Salary ($700 to $800)</option>
+															<option>Salary ($800 to $1000)</option>
+														</select>
+													</li>
+													<li>
+														<select name="experience">
+															<option>Experienc (1)</option>
+															<option>Experienc (2 to 4)</option>
+															<option>Experienc (4 to 5)</option>
+															<option>Experienc (5+)</option>
+														</select>
+													</li>
+												</ul>
+											</div>
+											<div class="id-number-area">
+												<h3>Your ID Number</h3>
+												<input type="text" name="idnumber" placeholder="Write Here">
+											</div>
+											<div class="actions">
+												<ul>
+													<li><button type="submit"><span class="" title="NEXT">SUBMIT</span> </button></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- step 3 -->
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="assets/js/jquery-3.3.1.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/owl.carousel.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/form-step.js"></script>
+		<script src="assets/js/jquery.validate.min.js"></script>
+		<script src="assets/js/validate.js"></script>
+		<script src="assets/js/contact.js"></script>
+		<script src="assets/js/main.js"></script>
+		<!-- <script src="assets/js/switch.js"></script> -->
+		<script>
+			$("#customFile").change(function() {
+				filename = this.files[0].name
+			});
+			$(".custom-file-input").on("change", function() {
+				var fileName = $(this).val().split("\\").pop();
+				$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+			});
+		</script>
+	</body>
+
+	</html>

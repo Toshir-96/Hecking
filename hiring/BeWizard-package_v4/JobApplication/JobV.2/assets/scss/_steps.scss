@@ -1,0 +1,17 @@
+.steps {
+	left: 42%;
+	z-index: 2;
+	bottom: 50px;
+	text-align: center;
+	li {
+		width: 22px;
+		height: 22px;
+		border-radius: 100%;
+		display: inline-block;
+		margin: 0px 3px;
+		background-color: #fff;
+	}
+	.js-active.current {
+		background-color: #1ed680;
+	}
+}

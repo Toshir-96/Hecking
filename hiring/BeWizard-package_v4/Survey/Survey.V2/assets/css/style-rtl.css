@@ -1,0 +1,782 @@
+@charset "UTF-8";
+/*----------------------------------------------------
+
+1. Global Area 
+2. Header Section
+=====================================================================*/
+/*=========
+Font load
+===========*/
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,600;1,700;1,800;1,900&display=swap");
+/*=========
+Color Code
+===========*/
+.details-form-area .nb-terms-condition .check-circle, .details-form-area .age-gender-selector .gender-selector .check-circle {
+  position: relative;
+}
+.details-form-area .nb-terms-condition .check-circle:before, .details-form-area .age-gender-selector .gender-selector .check-circle:before, .details-form-area .nb-terms-condition .check-circle:after, .details-form-area .age-gender-selector .gender-selector .check-circle:after {
+  top: -5px;
+  right: 0;
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #e1e1e1;
+  box-shadow: 0px 1px 29px 0px rgba(1, 1, 1, 0.09);
+}
+.details-form-area .nb-terms-condition .check-circle:after, .details-form-area .age-gender-selector .gender-selector .check-circle:after {
+  top: 3px;
+  right: 9px;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+}
+
+/*global area*/
+/*----------------------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  background: #f9f9f9;
+  color: #2f3146;
+  font-family: "Jost", sans-serif;
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  color: #fff;
+  background-color: #56ad70;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #56ad70;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.form-control:focus,
+button:visited,
+button.active,
+button:hover,
+button:focus,
+input:visited,
+input.active,
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus,
+a:hover,
+a:focus,
+a:visited,
+a.active,
+select,
+select:hover,
+select:focus,
+select:visited {
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.form-control {
+  box-shadow: none;
+}
+
+p, label {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Jost", sans-serif;
+}
+
+.pt150 {
+  padding-top: 150px;
+}
+
+.multisteps-form__panel[data-animation=scaleOut] {
+  transform: scale(1.1);
+}
+
+.multisteps-form__panel[data-animation=scaleOut].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+
+.multisteps-form__panel[data-animation=slideHorz] {
+  right: -50px;
+}
+
+.multisteps-form__panel[data-animation=slideHorz].js-active {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+  transition-delay: 0s;
+  right: 0;
+}
+
+.multisteps-form__panel[data-animation=slideVert] {
+  top: 30px;
+}
+
+.multisteps-form__panel[data-animation=slideVert].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: 0;
+}
+
+.multisteps-form__panel[data-animation=fadeIn].js-active {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+
+.multisteps-form__panel[data-animation=scaleIn] {
+  transform: scale(0.9);
+}
+
+.multisteps-form__panel[data-animation=scaleIn].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+
+/* ==========================================================================
+   multistep css
+   ========================================================================== */
+.multisteps-form__progress {
+  padding-top: 60px;
+  height: 100%;
+}
+
+.multisteps-form__panel {
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  overflow: hidden;
+  height: 0;
+}
+.multisteps-form__panel.js-active {
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  height: auto;
+}
+.multisteps-form__panel[data-animation=scaleOut] {
+  transform: scale(1.1);
+}
+.multisteps-form__panel[data-animation=scaleOut].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+.multisteps-form__panel[data-animation=slideHorz] {
+  right: -50px;
+}
+.multisteps-form__panel[data-animation=slideHorz].js-active {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+  transition-delay: 0s;
+  right: 0;
+}
+.multisteps-form__panel[data-animation=slideVert] {
+  top: 30px;
+}
+.multisteps-form__panel[data-animation=slideVert].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: 0;
+}
+.multisteps-form__panel[data-animation=fadeIn].js-active {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+.multisteps-form__panel[data-animation=scaleIn] {
+  transform: scale(0.9);
+}
+.multisteps-form__panel[data-animation=scaleIn].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+
+.actions {
+  float: left;
+  margin-top: 55px;
+}
+.actions li {
+  color: #fff;
+  height: 58px;
+  width: 230px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  line-height: 58px;
+  border-radius: 40px;
+  display: inline-block;
+  overflow: hidden;
+  text-transform: uppercase;
+  margin-right: 10px;
+  background-color: #cdcdcd;
+}
+.actions li .js-btn-next {
+  background-color: #56ad70;
+}
+.actions li .js-btn-prev {
+  color: #1a1a1a;
+}
+.actions li span, .actions li button {
+  display: block;
+  width: 100%;
+  transition: 0.3s all ease-in-out;
+}
+.actions li span:hover, .actions li button:hover {
+  color: #fff;
+  background-color: #56ad70;
+}
+.actions li button {
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/*---------------------------------------------------- */
+/*inner area*/
+/*----------------------------------------------------*/
+.wizard-content-1 {
+  margin: 0 auto;
+  max-width: 1730px;
+  background-color: #fff;
+  box-shadow: 0px 1px 51px 0px rgba(1, 1, 1, 0.06);
+}
+.wizard-content-1 .job-wizard-left-area {
+  width: 48%;
+  overflow: hidden;
+  padding: 340px 65px 50px;
+  background-image: linear-gradient(-14deg, #78c68e 0%, #4ca566 100%);
+}
+.wizard-content-1 .job-wizard-left-area:before {
+  top: -22px;
+  content: "";
+  width: 40px;
+  height: 110%;
+  left: -10px;
+  position: absolute;
+  background-color: #77cf90;
+  transform: rotate(7deg);
+}
+.wizard-content-1 .job-wizard-left-area:after {
+  top: -20px;
+  content: "";
+  width: 65px;
+  height: 110%;
+  left: -35px;
+  position: absolute;
+  background-color: #fff;
+  transform: rotate(4deg);
+}
+.wizard-content-1 .job-wizard-left-area h1 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1;
+  padding-bottom: 20px;
+  text-align: right;
+}
+.wizard-content-1 .job-wizard-left-area p {
+  color: #fff;
+  font-size: 27px;
+  max-width: 600px;
+}
+.wizard-content-1 .job-wizard-left-area .w-copyright {
+  color: #fff;
+  bottom: 40px;
+  font-size: 18px;
+  right: 10px;
+}
+.wizard-content-1 .job-wizard-right-area {
+  width: 52%;
+  z-index: 1;
+  position: relative;
+  padding: 115px 100px 80px;
+}
+.wizard-content-1 .job-wizard-right-area .jw-top-title {
+  padding-bottom: 30px;
+  text-align: right;
+}
+.wizard-content-1 .job-wizard-right-area .jw-top-title h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1b1b1b;
+}
+.wizard-content-1 .job-wizard-right-area .jw-top-title h3 {
+  color: #232222;
+  font-size: 33px;
+  font-weight: 600;
+}
+.wizard-content-1 .job-wizard-right-area .jw-top-title span {
+  font-size: 19px;
+  color: #232222;
+}
+.wizard-content-1 .job-wizard-right-area .jw-top-title p {
+  font-size: 18px;
+  font-family: "Jost", sans-serif;
+}
+.wizard-content-1 .job-wizard-right-area .actions {
+  bottom: 100px;
+}
+.wizard-content-1 .job-wizard-right-area.survey-right-content-1 {
+  max-width: 875px;
+  display: inline-block;
+}
+.wizard-content-1 .job-wizard-right-two {
+  padding-left: 55px;
+}
+.wizard-content-1 .job-wizard-right-two .actions {
+  left: 55px;
+}
+
+.reccomend-selector li {
+  width: 100%;
+  height: 65px;
+  color: #777777;
+  font-size: 15px;
+  line-height: 65px;
+  font-weight: 400;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  display: inline-block;
+  background-color: #ececec;
+}
+.reccomend-selector li label {
+  width: 100%;
+  color: #121212;
+  font-size: 24px;
+  padding-right: 80px;
+}
+.reccomend-selector li .checkmark-border:before {
+  content: "";
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  border-radius: 100%;
+  right: 30px;
+  top: 13px;
+  background-color: #fff;
+  border: 2px solid #c4c4c4;
+}
+.reccomend-selector li .checkmark-border:after {
+  top: 20px;
+  right: 37px;
+  width: 24px;
+  content: "";
+  height: 24px;
+  display: none;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #56ad70;
+}
+.reccomend-selector li .exp-option-box:checked ~ .checkmark-border:after {
+  display: block;
+}
+.reccomend-selector .exp-option-box {
+  display: none;
+}
+.reccomend-selector .exp-label {
+  display: block;
+}
+
+.additional-reccomend textarea {
+  width: 100%;
+  border: none;
+  height: 125px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #ececec;
+}
+.additional-reccomend textarea:placeholder {
+  color: #121212;
+  font-size: 17px;
+}
+
+.service-review {
+  padding-bottom: 75px;
+  text-align: right;
+}
+.service-review li {
+  width: 135px;
+  height: 135px;
+  border-radius: 5px;
+  margin-left: 30px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  background-color: #fffced;
+}
+.service-review li span {
+  display: block;
+}
+.service-review li .ser_rev {
+  display: none;
+}
+.service-review li .review_select {
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  border: 2px solid #56ad70;
+}
+.service-review li .ser_rev:checked ~ .review_select {
+  display: block;
+}
+.service-review li .service-review-img {
+  padding-top: 15px;
+}
+.service-review li .service-review-text {
+  right: 0;
+  left: 0;
+  bottom: -10px;
+  width: 108px;
+  height: 30px;
+  margin: 0 auto;
+  color: #232222;
+  font-size: 15px;
+  position: absolute;
+  line-height: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0px 1px 21px 0px rgba(1, 1, 1, 0.1);
+}
+
+.service-textbox span {
+  right: 18px;
+  top: -18px;
+  width: 120px;
+  height: 35px;
+  margin: 0 auto;
+  color: #232222;
+  font-size: 15px;
+  position: absolute;
+  line-height: 35px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0px 1px 21px 0px rgba(1, 1, 1, 0.1);
+}
+.service-textbox textarea {
+  width: 100%;
+  border: none;
+  height: 275px;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.survey-right-content-3 .survey-reccomend-area-3 {
+  max-width: 650px;
+}
+.survey-right-content-3 .reccomend-selector li .checkmark-border:before {
+  height: 35px;
+  width: 35px;
+  border-radius: 3px;
+}
+.survey-right-content-3 .reccomend-selector li .checkmark-border:after {
+  top: 22px;
+  right: 39px;
+  width: inherit;
+  line-height: 1;
+  color: #121212;
+  height: inherit;
+  font-size: 18px;
+  content: "";
+  font-weight: 900;
+  background-color: transparent;
+  font-family: "Font Awesome 5 Free";
+}
+.survey-right-content-3 .reccomend-selector .nb-txt {
+  color: #121212;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.reccomend-faq-content li {
+  width: 100%;
+  max-width: 550px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  display: inline-block;
+  border-bottom: 2px solid #cdcdcd;
+}
+.reccomend-faq-content li:last-child {
+  border-bottom: none;
+}
+.reccomend-faq-content li span {
+  float: right;
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+  display: block;
+  font-weight: 600;
+  line-height: 35px;
+  margin-left: 20px;
+  text-align: center;
+  border-radius: 100%;
+  border: 2px solid #c8c8c8;
+}
+.reccomend-faq-content li h3 {
+  font-size: 24px;
+}
+
+.details-form-area .form-input-inner {
+  height: 72px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0px 1px 29px 0px rgba(1, 1, 1, 0.09);
+}
+.details-form-area .form-input-inner input,
+.details-form-area .form-input-inner select,
+.details-form-area .form-input-inner textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-right: 40px;
+  border-radius: 5px;
+}
+.details-form-area .form-input-inner input::placeholder,
+.details-form-area .form-input-inner select::placeholder,
+.details-form-area .form-input-inner textarea::placeholder {
+  color: #b7b7b7;
+  font-weight: 500;
+  font-size: 14px;
+}
+.details-form-area .form-input-inner textarea {
+  width: 100%;
+  padding-top: 30px;
+}
+.details-form-area .form-input-inner select {
+  -webkit-appearance: none;
+}
+.details-form-area .form-input-inner select option {
+  color: #b7b7b7;
+  font-size: 14px;
+}
+.details-form-area .form-input-inner .icon-bg {
+  top: 20px;
+  right: -17px;
+  width: 33px;
+  height: 33px;
+  line-height: 33px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #e4e4e4;
+}
+.details-form-area .form-input-inner .icon-bg i {
+  color: #686868;
+  font-size: 14px;
+}
+.details-form-area .age-gender-selector {
+  margin: 0 15px;
+  display: block;
+  width: 100%;
+}
+.details-form-area .age-gender-selector .form-input-inner {
+  width: 100px;
+  margin-left: 50px;
+}
+.details-form-area .age-gender-selector .gender-selector label {
+  margin-left: 30px;
+}
+.details-form-area .age-gender-selector .gender-selector .gender-input {
+  display: none;
+}
+.details-form-area .age-gender-selector .gender-selector .checkmark {
+  color: #b7b7b7;
+  font-weight: 700;
+  padding-right: 50px;
+}
+.details-form-area .age-gender-selector .gender-selector .gender-input:checked ~ .check-circle:after {
+  background-color: #56ad70;
+}
+.details-form-area .nb-terms-condition .gender-input {
+  display: none;
+}
+.details-form-area .nb-terms-condition .checkmark {
+  color: #343434;
+  font-size: 16px;
+  font-weight: 500;
+  padding-right: 45px;
+}
+.details-form-area .nb-terms-condition .gender-input:checked ~ .check-circle:after {
+  background-color: #343434;
+}
+
+/*---------------------------------------------------- */
+/*Responsive area*/
+/*----------------------------------------------------*/
+/* ==================================================
+* 01 - media screen and (max-width: 1440px)
+* 02 - media screen and (max-width: 1280px)
+* 03 - media screen and (max-width: 1199px)
+* 04 - media screen and (max-width: 991px)
+* 05 - media screen and (max-width: 767px)
+* 06 - media screen and (max-width: 680px)
+* 07 - media screen and (max-width: 580px)
+* 08 - media screen and (max-width: 480px)
+* 09 - media screen and (max-width: 380px)
+* 10 - media screen and (max-width: 320px)
+================================================== */
+@media screen and (max-width: 1440px) {
+  .wizard-content-1 .job-wizard-left-area:before,
+.wizard-content-1 .job-wizard-left-area:after {
+    display: none;
+  }
+
+  .service-review li {
+    margin-left: 10px;
+  }
+
+  .wizard-content-1 .job-wizard-right-area {
+    padding: 115px 40px 80px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .service-review li {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .job-style-two-content {
+    display: block !important;
+  }
+
+  .wizard-content-1 .job-wizard-left-area {
+    width: 100%;
+  }
+
+  .wizard-content-1 .job-wizard-right-area {
+    width: 100%;
+  }
+
+  .wizard-content-1 .job-wizard-left-area {
+    padding: 100px 40px;
+  }
+
+  .wizard-content-1 .job-wizard-left-area .w-copyright {
+    margin-top: 40px;
+    padding-top: 30px;
+    display: block;
+    position: static !important;
+  }
+
+  .actions {
+    float: none;
+  }
+
+  .wizard-content-1 {
+    box-shadow: none;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wizard-content-1 .job-wizard-left-area h1 {
+    font-size: 40px;
+  }
+
+  .wizard-content-1 .job-wizard-left-area p {
+    font-size: 20px;
+  }
+
+  .wizard-content-1 .job-wizard-right-area .jw-top-title h2 {
+    font-size: 30px;
+  }
+
+  .wizard-content-1 .job-wizard-left-area {
+    padding: 50px 20px;
+  }
+
+  .wizard-content-1 .job-wizard-right-area {
+    padding: 50px 20px 20px;
+  }
+
+  .actions li {
+    height: 50px;
+    width: 180px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 50px;
+  }
+
+  .reccomend-faq-content li h3 {
+    font-size: 18px;
+  }
+
+  .details-form-area .age-gender-selector .form-input-inner {
+    width: 100%;
+  }
+
+  .nb-terms-condition {
+    padding-top: 50px;
+    margin-right: 15px;
+  }
+}
+/*---------------------------------------------------- */

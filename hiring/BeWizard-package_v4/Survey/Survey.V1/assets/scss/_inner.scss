@@ -1,0 +1,228 @@
+.wizard-content-1 {
+	margin: 110px auto 150px;
+	max-width: 1680px;
+	background-color: #fff;
+	border-radius: 20px;
+	.survey-top-title {
+		top: -90px;
+		z-index: 1;
+		margin: 0 auto;
+		font-size: 45px;
+		max-width: 1490px;
+		border-radius: 100px;
+		padding: 45px 0px 35px;
+		background-color: #414040;
+		&:before {
+			top: 0;
+			right: -10px;
+			content: '';
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			border-radius: 100px;
+			background-color: $base-color;
+		}
+		&:after {
+			top: 0;
+			content: '';
+			z-index: -2;
+			width: 100%;
+			height: 100%;
+			right: -20px;
+			position: absolute;
+			border-radius: 100px;
+			background-color: #414040;
+		}
+		h2 {
+			color: #fff;
+			margin: 0 auto;
+			font-size: 45px;
+			max-width: 550px;
+			font-weight: 700;
+			line-height: 1.111;
+		}
+	}
+	.survey-form-img {
+		float: left;
+		margin-right: 100px;
+	}
+	.survey-form-area {
+		padding: 10px 115px 80px;
+	}
+	.survey-form-field {
+		h3 {
+			color: #1b1b1b;
+			font-size: 42px;
+			font-weight: 700;
+			padding-bottom: 45px;
+		}
+		li {
+			width: 25%;
+			float: left;
+			margin-bottom: 40px;
+			label {
+				width: 100%;
+				color: #414040;
+				font-size: 30px;
+				padding-left: 65px;
+			}
+			.exp-option-box {
+				display: none;
+			}
+			.checkmark-border {
+				&:before {
+					top: 0px;
+					width: 45px;
+					content: "";
+					left: -65px;
+					height: 45px;
+					position: absolute;
+					border-radius: 100%;
+					background-color: #fff;
+					border: 1px solid #c4c4c4;
+				}
+				&:after {
+					top: 7px;
+					left: -57px;
+					width: 30px;
+					content: "";
+					height: 30px;
+					display: none;
+					position: absolute;
+					border-radius: 100%;
+					background-color: $base-color;
+				}
+			}
+			.exp-option-box:checked ~ .checkmark-border:after {
+				display: block;
+			}
+		}
+	}
+	.q-depth-input-area {
+		.input-depth {
+			input {
+				width: 100%;
+			}
+		}
+	}
+	.survey-content-two {
+		.survey-form-field {
+			max-width: 700px;
+			padding-top: 120px;
+			display: inline-block;
+			h3 {
+				font-size: 40px;
+			}
+			.q-depth-input-area {
+				.input-depth {
+					margin-bottom: 20px;
+					input {
+						height: 80px;
+						border-radius: 4px;
+						padding-left: 90px;
+						border: 2px solid #78c68e;
+					}
+					.in-icon {
+						top: 23px;
+						left: 30px;
+						width: 35px;
+						height: 35px;
+						line-height: 35px;
+						position: absolute;
+						border-radius: 100%;
+						background-color: #def7e5;
+						i {
+							color: $base-color;
+						}
+					}
+				}
+			}
+			.survey-ratting {
+				margin: 18px 0px 65px;
+				border-radius: 5px;
+				display: inline-block;
+				padding: 10px 40px 30px;
+				border: 2px solid $base-color;
+				.survey-rate-text {
+					left: 0;
+					right: 0;
+					color: #fff;
+					width: 155px;
+					height: 28px;
+					bottom: -15px;
+					margin: 0 auto;
+					font-size: 14px;
+					text-align: center;
+					line-height: 27px;
+					position: absolute;
+					border-radius: 6px;
+					background-color: $base-color;
+				}
+				
+				li {
+					width: 30px;
+					height: 25px;
+					padding-left: 0;
+					margin-bottom: 0;
+					display: inline-block;
+					label {
+						padding-left: 0;
+					}
+					.survey-rate {
+						display: none;
+					}
+					.survey-rate-option .survey-rate:checked ~ .rate-value:before {
+						content: '\f005';
+						font-weight: 900;
+					}
+				}
+			}
+		}
+		.survey-rate-content {
+			padding-top: 70px;
+			h3 {
+				padding-bottom: 32px;
+			}
+			p {
+				color: #1b1b1b;
+				font-size: 20px;
+			}
+		}
+		.survey-connect-option {
+			max-width: 470px;
+			margin-top: 10px;
+			&:after {
+				top: 25px;
+				right: 20px;
+				font-size: 20px;
+				content: '\f0d7';
+				position: absolute;
+				font-weight: 900;
+				font-family: 'Font Awesome 5 Free';
+			}
+			select {
+				width: 100%;
+				height: 80px;
+				font-weight: 400;
+				font-size: 18px;
+				border-radius: 4px;
+				padding-left: 35px;
+				border: 2px solid $base-color;
+				-webkit-appearance: none;
+			}
+		}
+		.survey-thankyou {
+			p {
+				color: #1b1b1b;
+				font-size: 20px;
+				padding: 10px 0px;
+			}
+			h2 {
+				color: #1b1b1b;
+				font-size: 42px;
+				font-weight: 700;
+			}
+		}
+	}
+}
