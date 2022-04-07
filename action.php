@@ -23,7 +23,7 @@ $upload_size	= $_FILES['file_upload']['size'];
  */
 $to = 'hecking.me.96@gmail.com'; // change here
 $subject = 'Job Application'; // change here
-$from = 'gideon.immanuel.p@gmail.com'; // change here
+$from = 'noreply@hecking.me'; // change here
 
 // To send HTML mail, the Content-type header must be set
 $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -36,17 +36,17 @@ $headers .= 'From: ' . $from . "\r\n" .
 
 // Compose a simple HTML email message
 $message = '<html><body>';
-$message .= '<p style="color:#080;font-size:18px;">You are register for ' . $job_title . '</p>';
-$message .= '<h1 style="color:#f40;">Hi ' . $first_name . '!</h1>';
-$message .= '<p style="color:#080;font-size:16px;">Last Name: ' . $last_name . '</p>';
-$message .= '<p style="color:#080;font-size:16px;">Email: ' . $email . '</p>';
-$message .= '<p style="color:#080;font-size:16px;">Phone: ' . $phone . '</p>';
-$message .= '<p style="color:#080;font-size:16px;">Country: ' . $country_list . '</p>';
-$message .= '<p style="color:#080;font-size:16px;">City: ' . $city_list . '</p>';
-$message .= '<p style="color:#080;font-size:16px;">Gender: ' . $gender . '</p>';
-$message .= '<p style="color:#080;font-size:16px;">Address: ' . $address . '</p>';
-$message .= '<p style="color:#080;font-size:16px;">Position: ' . $position_list . '</p>';
-$message .= '<p style="color:#080;font-size:16px;">Additional Info: ' . $add_info . '</p>';
+$message .= '<p>register for ' . $job_title . '</p>';
+$message .= '<p>Name ' . $first_name . '</p>';
+$message .= '<p>Last Name: ' . $last_name . '</p>';
+$message .= '<p>Email: ' . $email . '</p>';
+$message .= '<p>Phone: ' . $phone . '</p>';
+$message .= '<p>Country: ' . $country_list . '</p>';
+$message .= '<p>City: ' . $city_list . '</p>';
+$message .= '<p>Gender: ' . $gender . '</p>';
+$message .= '<p>Address: ' . $address . '</p>';
+$message .= '<p>Position: ' . $position_list . '</p>';
+$message .= '<p>Additional Info: ' . $add_info . '</p>';
 $message .= '</body></html>';
 
 // Sending email
@@ -59,9 +59,9 @@ if (isset($_REQUEST['submit'])) {
 
 		//mail
 		if (mail($to, $subject, $message, $headers)) {
-			echo 'Your mail has been sent successfully.';
+			echo 'Your request has been recorded successfully.';
 		} else {
-			echo 'Unable to send email. Please try again.';
+			echo 'Unable to send request. Please try again.';
 		}
 		// echo 'Data inserted';
 		header('location:view.php');

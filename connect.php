@@ -11,7 +11,7 @@ class CodenodForm
 	 */
 	public function __construct()
 	{
-		$this->conn = new mysqli("localhost", "id18607675_job_application_hecking", "hecking.me@19", "id18607675_job_application") or die("connetion error!"); // please change with your mysql detail
+		$this->conn = new mysqli("localhost", "id18607675_job_application_hecking", "Shravanth.m@19&", "id18607675_jobapplication") or die("connetion error!"); // please change with your mysql detail
 
 	}
 
