@@ -3,7 +3,7 @@
 
 		function i() {
 
-			eventDate = (Date.parse(new Date().toDateString())+86400000) / 1e3;
+			eventDate = (Date.parse(new Date("Jan 5, 2024 15:37:25").toDateString())+86400000) / 1e3;
 
 			currentDate = Math.floor($.now() / 1e3);
 
