@@ -117,7 +117,7 @@ include 'connect.php';
 						</tbody>
 					</tr>
 				</table>
-				<div><a href="index.html" class="pull-right btn btn-primary apply-now">Apply New</a></div>
+				<div><a href="jobapplication.html" class="pull-right btn btn-primary apply-now">Apply New</a></div>
 			</div>
 		</div>
 	</div>

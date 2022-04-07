@@ -59,7 +59,7 @@ if (isset($_REQUEST['submit'])) {
 
 		//mail
 		if (mail($to, $subject, $message, $headers)) {
-			echo 'Your request has been recorded successfully.';
+			header('location:/form_submitted/formsubmitted.html');
 		} else {
 			echo 'Unable to send request. Please try again.';
 		}
